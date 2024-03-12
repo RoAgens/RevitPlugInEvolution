@@ -1,6 +1,6 @@
-﻿using Autodesk.Revit.ApplicationServices;
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using RVApplication = Autodesk.Revit.ApplicationServices.Application;
 
 namespace AGRevitCommandSimple.Base
 {
@@ -8,7 +8,7 @@ namespace AGRevitCommandSimple.Base
     {
         protected ExternalCommandData _commandData;
         protected UIDocument _uiDoc;
-        protected Application _app;
+        protected RVApplication _app;
         protected Document _doc;
 
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)

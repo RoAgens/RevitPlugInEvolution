@@ -11,7 +11,7 @@ namespace AGRevitCommandSimple
 
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            _doc = commandData?.Application.ActiveUIDocument.Document;
+            _doc = commandData.Application.ActiveUIDocument?.Document;
 
             try
             {

@@ -72,7 +72,6 @@
             this.Controls.Add(this.btnSelectElement);
             this.Name = "MainWinForm";
             this.Text = "MainWinForm";
-            this.Load += new System.EventHandler(this.MainWinForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

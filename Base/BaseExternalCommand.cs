@@ -17,7 +17,7 @@ namespace AGRevitCommandSimple.Base
             _uiDoc = commandData.Application.ActiveUIDocument;
             _app = commandData.Application.Application;
 
-            _doc = commandData?.Application.ActiveUIDocument.Document;
+            _doc = commandData.Application.ActiveUIDocument?.Document;
 
             try
             {

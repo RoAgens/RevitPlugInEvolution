@@ -5,18 +5,9 @@
 - Step 4 - (branch RevitCommandWithWinForm_2) - WinForm and public controls.
 - Step 5 - (branch RevitCommandWithWinFormAddPushButton) - WinForm (var 2) with start PushButton.
 - Step 6 - (branch RevitCommandWithWPF) - WPF.
-------------
-- просто команда
-- с наследованием
-- команда с винформой, код бихайнд
-- команда с винформой, публичные контролы
-- команда с винформой с добавлением кнопки на ленту и манифестом
-- WPF
-- WPF со стилями
-- добавили кнопочку на панельку
-- MVVM не MVVM
-- MVVM простой
-- MVVM с CommunityToolkit.Mvvm
-- MVVM+DI
-- MVVM+DI+DTO
-- и т.д )
+- Step 7 - (branch RevitCommandWithWPF) - WPF and bad MVVM.
+- Step 8 - (branch RevitCommandWithWPF) - WPF and MVVM.
+- Step 9 - (branch RevitCommandWithWPF) - WPF and MVVM use CommunityToolkit.Mvvm.
+- Step 10 - (branch RevitCommandWithWPF) - WPF and MVVM + DI.
+- Step 11 - (branch RevitCommandWithWPF) - WPF and MVVM + DI + DTO (by @WhiteSharq).
+- Step 12 - your code...

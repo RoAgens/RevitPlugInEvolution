@@ -1,5 +1,5 @@
 # Revit Plugin Evolution [RPE]
-- Step 1 (branch RevitCommandSimple or master) - Simple Revit Command
+- Step 1 - (branch RevitCommandSimple or master) - Simple Revit Command
 - Step 2 - (branch RevitCommandSimpleBaseAbstractClass) - Add to project abstract class.
 - Step 3 - (branch RevitCommandWithWinForm_1) WinForm and code-behind.
 

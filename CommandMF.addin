@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>FindingMirroredElements</Name>
+		<Assembly>AGRevitCommandSimple.dll</Assembly>
+		<FullClassName>AGRevitCommandSimple.App</FullClassName>
+		<AddInId>02d40c6c-2700-479f-ad5e-5435b8817eb8</AddInId>
+		<VendorId>AGRevitCommandSimple</VendorId>
+		<VendorDescription>contact me: r.konyaev@gmail.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>

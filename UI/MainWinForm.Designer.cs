@@ -41,7 +41,6 @@
             this.btnSelectElement.TabIndex = 0;
             this.btnSelectElement.Text = "SelectElement";
             this.btnSelectElement.UseVisualStyleBackColor = true;
-            this.btnSelectElement.Click += new System.EventHandler(this.btnSelectElement_Click);
             // 
             // tbElementId
             // 
@@ -60,7 +59,6 @@
             this.btClose.TabIndex = 2;
             this.btClose.Text = "Close";
             this.btClose.UseVisualStyleBackColor = true;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // MainWinForm
             // 
@@ -79,8 +77,8 @@
 
         #endregion
 
-        private TextBox tbElementId;
-        private Button btnSelectElement;
-        private Button btClose;
+        public TextBox tbElementId;
+        public Button btnSelectElement;
+        public Button btClose;
     }
 }

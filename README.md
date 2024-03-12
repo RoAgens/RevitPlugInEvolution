@@ -1,1 +1,1 @@
-# Step 1 - AGRevitCommandSimple
+# Step 1 - Simple Revit Command

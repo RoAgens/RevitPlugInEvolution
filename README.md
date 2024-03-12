@@ -4,11 +4,13 @@
 - Step 3 - (branch RevitCommandWithWinForm_1) - WinForm and code-behind.
 - Step 4 - (branch RevitCommandWithWinForm_2) - WinForm and public controls.
 - Step 5 - (branch RevitCommandWithWinFormAddPushButton) - WinForm (var 2) with start PushButton.
+- Step 6 - (branch RevitCommandWithWPF) - WPF.
 ------------
 - просто команда
 - с наследованием
 - команда с винформой, код бихайнд
 - команда с винформой, публичные контролы
+- команда с винформой с добавлением кнопки на ленту и манифестом
 - WPF
 - WPF со стилями
 - добавили кнопочку на панельку

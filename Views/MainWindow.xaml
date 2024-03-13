@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AGRevitCommandSimple.View"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="auto"
+        Height="125"
         Width="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -31,7 +31,8 @@
             <Button Grid.Column="1"
                     x:Name="btnClose"
                     Margin="5"
-                    Content="Close" Click="btnClose_Click"/>
+                    Content="Close"
+                    Click="btnClose_Click"/>
         </Grid>
     </Grid>
 </Window>

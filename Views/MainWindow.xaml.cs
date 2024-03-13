@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
 
 namespace AGRevitCommandSimple.View
@@ -14,8 +15,10 @@ namespace AGRevitCommandSimple.View
         public MainWindow(Document doc)
         {
             _doc = doc;
-            tbSelectElementId.Text = "---------";
+
             InitializeComponent();
+
+            tbSelectElementId.Text = "---------";
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -30,9 +33,11 @@ namespace AGRevitCommandSimple.View
 
         private void GetSelectElementId()
         {
-            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element, "Please pick any element");
+            UIDocument uIDocument = new(_doc);
 
-            tbElementId.Text = reference?.ElementId.ToString();
+            Reference reference = uIDocument.Selection.PickObject(ObjectType.Element, "Please pick any element");
+
+            tbSelectElementId.Text = reference?.ElementId.ToString();
         }
     }
 }

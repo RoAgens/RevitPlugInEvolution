@@ -1,8 +1,8 @@
-﻿using AGRevitCommandSimple.Base;
-using AGRevitCommandSimple.UI;
-using Autodesk.Revit.Attributes;
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using AGRevitCommandSimple.UI;
+using AGRevitCommandSimple.Base;
+using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI.Selection;
 
 namespace AGRevitCommandSimple

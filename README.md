@@ -1,2 +1,2 @@
-# Step 8 - WPF and MVVM.
+# Step 10 - WPF and MVVM + DI (one file).
 net48, Revit 2021

@@ -12,7 +12,7 @@ namespace AGRevitCommandSimple
         public override Result Execute()
         {
             MainWindow mainWindow = new(_doc);
-            mainWindow.ShowDialog();
+            mainWindow.Show();
 
             return Result.Succeeded;
         }

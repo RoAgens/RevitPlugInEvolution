@@ -1,9 +1,9 @@
-﻿using AGRevitCommandSimple.Base;
-using AGRevitCommandSimple.View;
-using AGRevitCommandSimple.ViewModels;
-using Autodesk.Revit.Attributes;
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using AGRevitCommandSimple.Base;
+using AGRevitCommandSimple.View;
+using Autodesk.Revit.Attributes;
+using AGRevitCommandSimple.ViewModels;
 
 namespace AGRevitCommandSimple
 {
@@ -14,7 +14,7 @@ namespace AGRevitCommandSimple
         {
             MainWindowViewModel mainaWindowViewModel = new(_uiDoc);
             MainWindow mainWindow = new(mainaWindowViewModel);
-            mainWindow.ShowDialog();
+            mainWindow.Show();
 
             return Result.Succeeded;
         }

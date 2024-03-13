@@ -2,6 +2,8 @@
 using AGRevitCommandSimple.Models;
 using AGRevitCommandSimple.ViewModels.Base;
 using Autodesk.Revit.UI;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace AGRevitCommandSimple.ViewModels
 {
@@ -28,5 +30,15 @@ namespace AGRevitCommandSimple.ViewModels
         {
             SelectedElementId = new SelectElementService(_uiDoc).GetElementId();
         }));
+
+        private RelayCommand _closeWindow;
+        public RelayCommand CloseWindow => _closeWindow ??
+            (_closeWindow = new RelayCommand(obj =>
+            {
+                var button = obj as Button;
+                var window = Window.GetWindow(button);
+
+                if (window != null) window.Close();  
+            }));
     }
 }

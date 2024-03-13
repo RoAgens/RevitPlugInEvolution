@@ -1,21 +1,24 @@
 ﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
+using Autodesk.Revit.UI.Selection;
 
 namespace AGRevitCommandSimple.Models
 {
     internal class SelectElementService
     {
-        private readonly Document _doc;
+        private readonly UIDocument _uiDoc;
 
-        public SelectElementService(Document doc) => _doc = doc;
+        public SelectElementService(UIDocument uiDoc) => _uiDoc = uiDoc;
 
         public string GetElementId()
         {
-            return SelectElement().Id.ToString();
+            return SelectElement()?.ToString();
         }
 
-        private Element SelectElement()
+        private ElementId SelectElement()
         {
-            return null;
+            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element, "Please pick any element");
+            return reference?.ElementId;
         }
     }
 }

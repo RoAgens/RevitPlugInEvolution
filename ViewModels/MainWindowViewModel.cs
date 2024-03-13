@@ -2,14 +2,15 @@
 using AGRevitCommandSimple.Models;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using Autodesk.Revit.UI;
 
 namespace AGRevitCommandSimple.ViewModels
 {
     public partial class MainWindowViewModel : ObservableObject
     {
-        private readonly Document _doc;
+        private readonly UIDocument _uiDoc;
 
-        public MainWindowViewModel(Document doc) => _doc = doc;
+        public MainWindowViewModel(UIDocument uiDoc) => _uiDoc = uiDoc;
 
         [ObservableProperty]
         private string _selectedElementId;
@@ -17,7 +18,7 @@ namespace AGRevitCommandSimple.ViewModels
         [RelayCommand]
         private void GetSelectedElementID()
         {
-            SelectedElementId = new SelectElementService(_doc).GetElementId();
+            SelectedElementId = new SelectElementService(_uiDoc).GetElementId();
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using AGRevitCommandSimple.Base;
-using AGRevitCommandSimple.UI;
-using Autodesk.Revit.Attributes;
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using AGRevitCommandSimple.UI;
+using AGRevitCommandSimple.Base;
+using Autodesk.Revit.Attributes;
 using Autodesk.Revit.UI.Selection;
 
 namespace AGRevitCommandSimple
@@ -31,11 +31,8 @@ namespace AGRevitCommandSimple
             UIDocument uIDocument = new(_doc);
 
             Reference reference = uIDocument.Selection.PickObject(ObjectType.Element);
-            Element element = _doc.GetElement(reference);
-            ElementId elementId = element.Id;
-            int intElementId = elementId.IntegerValue;
 
-            _mainWinForm.tbElementId.Text = intElementId.ToString();
+            _mainWinForm.tbElementId.Text = reference?.ElementId.ToString();
         }
     }
 }

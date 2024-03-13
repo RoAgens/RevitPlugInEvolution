@@ -30,11 +30,8 @@ namespace AGRevitCommandSimple.UI
             UIDocument uIDocument = new(_doc);
 
             Reference reference = uIDocument.Selection.PickObject(ObjectType.Element);
-            Element element = _doc.GetElement(reference);
-            ElementId elementId = element.Id;
-            int intElementId = elementId.IntegerValue;
-
-            return $"{intElementId}";
+ 
+            return $"{reference?.ElementId.ToString()}";
         }
 
         private void btClose_Click(object sender, EventArgs e)

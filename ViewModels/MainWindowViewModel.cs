@@ -1,31 +1,23 @@
 ﻿using Autodesk.Revit.DB;
 using AGRevitCommandSimple.Models;
-using AGRevitCommandSimple.ViewModels.Base;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AGRevitCommandSimple.ViewModels
 {
-    public class MainWindowViewModel : BaseViewModel
+    public partial class MainWindowViewModel : ObservableObject
     {
         private readonly Document _doc;
 
         public MainWindowViewModel(Document doc) => _doc = doc;
 
+        [ObservableProperty]
         private string _selectedElementId;
-        public string SelectedElementId
-        {
-            get => _selectedElementId;
-            set
-            {
-                _selectedElementId = value;
-                OnPropertyChanged(nameof(SelectedElementId));
-            }
-        }
 
-        private RelayCommand _selectElement;
-        public RelayCommand SelectElement => _selectElement ??
-        (_selectElement = new RelayCommand(obj =>
+        [RelayCommand]
+        private void GetSelectedElementID()
         {
             SelectedElementId = new SelectElementService(_doc).GetElementId();
-        }));
+        }
     }
 }

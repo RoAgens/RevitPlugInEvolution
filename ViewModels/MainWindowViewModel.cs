@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using AGRevitCommandSimple.Models;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows;
 
 namespace AGRevitCommandSimple.ViewModels
 {
@@ -23,10 +24,8 @@ namespace AGRevitCommandSimple.ViewModels
         [RelayCommand]
         private void CloseWindow(Button? button)
         {
-            //if (obj is Window window)
-            //{
-            //    window.Close();
-            //}
+            var window = Window.GetWindow(button);
+            if (window != null) window.Close();
         }
     }
 }

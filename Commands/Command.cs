@@ -12,7 +12,7 @@ namespace AGRevitCommandSimple
     {
         public override Result Execute()
         {
-            MainWindowViewModel mainaWindowViewModel = new(_doc);
+            MainWindowViewModel mainaWindowViewModel = new(_uiDoc);
             MainWindow mainWindow = new(mainaWindowViewModel);
             mainWindow.ShowDialog();
 

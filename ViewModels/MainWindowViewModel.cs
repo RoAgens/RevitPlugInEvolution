@@ -1,14 +1,15 @@
 ﻿using Autodesk.Revit.DB;
 using AGRevitCommandSimple.Models;
 using AGRevitCommandSimple.ViewModels.Base;
+using Autodesk.Revit.UI;
 
 namespace AGRevitCommandSimple.ViewModels
 {
     public class MainWindowViewModel : BaseViewModel
     {
-        private readonly Document _doc;
+        private readonly UIDocument _uiDoc;
 
-        public MainWindowViewModel(Document doc) => _doc = doc;
+        public MainWindowViewModel(UIDocument uiDoc) => _uiDoc = uiDoc;
 
         private string _selectedElementId;
         public string SelectedElementId
@@ -25,7 +26,7 @@ namespace AGRevitCommandSimple.ViewModels
         public RelayCommand SelectElement => _selectElement ??
         (_selectElement = new RelayCommand(obj =>
         {
-            SelectedElementId = new SelectElementService(_doc).GetElementId();
+            SelectedElementId = new SelectElementService(_uiDoc).GetElementId();
         }));
     }
 }

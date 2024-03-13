@@ -31,7 +31,6 @@
                     Content="SelectElement"
                     Command="{Binding SelectElement}"/>
             <Button Grid.Column="1"
-                    x:Name="btnClose"
                     Margin="5"
                     Content="Close"
                     Command="{Binding CloseWindow}"

@@ -7,7 +7,7 @@
         xmlns:dc="clr-namespace:AGRevitCommandSimple.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="auto"
+        Height="125"
         Width="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,12 +29,12 @@
             <Button x:Name="btnSelectElement"
                     Margin="5"
                     Content="SelectElement"
-                    Command="{Binding SelectElement}"/>
+                    Command="{Binding GetSelectedElementIDCommand}"/>
             <Button Grid.Column="1"
                     x:Name="btnClose"
                     Margin="5"
                     Content="Close"
-                    Command="{Binding CloseWindow}"/>
+                    Command="{Binding CloseWindowCommand}"/>
         </Grid>
     </Grid>
 </Window>

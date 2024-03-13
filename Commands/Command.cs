@@ -14,7 +14,7 @@ namespace AGRevitCommandSimple
         {
             MainWindowViewModel mainaWindowViewModel = new(_uiDoc);
             MainWindow mainWindow = new(mainaWindowViewModel);
-            mainWindow.ShowDialog();
+            mainWindow.Show();
 
             return Result.Succeeded;
         }

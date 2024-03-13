@@ -1,8 +1,8 @@
-﻿using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.UI;
+using System.Windows.Controls;
 using AGRevitCommandSimple.Models;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Autodesk.Revit.UI;
 
 namespace AGRevitCommandSimple.ViewModels
 {
@@ -19,6 +19,14 @@ namespace AGRevitCommandSimple.ViewModels
         private void GetSelectedElementID()
         {
             SelectedElementId = new SelectElementService(_uiDoc).GetElementId();
+        }
+        [RelayCommand]
+        private void CloseWindow(Button? button)
+        {
+            //if (obj is Window window)
+            //{
+            //    window.Close();
+            //}
         }
     }
 }

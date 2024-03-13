@@ -32,10 +32,10 @@ namespace AGRevitCommandSimple
         {
             string value = "";
 
-            Element elemnt = GetElement();
+            Element element = GetElement();
 
-            if (elemnt != null)
-                value = elemnt.Id.ToString();
+            if (element != null)
+                value = element.Id.ToString();
             else
                 value = "Element not selected";
 

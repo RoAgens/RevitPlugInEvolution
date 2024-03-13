@@ -21,21 +21,11 @@ namespace AGRevitCommandSimple
             return Result.Succeeded;
         }
 
-        private void BtClose_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void SelectElemet()
         {
-            UIDocument uIDocument = new(_doc);
+            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element);
 
-            Reference reference = uIDocument.Selection.PickObject(ObjectType.Element);
-            Element element = _doc.GetElement(reference);
-            ElementId elementId = element.Id;
-            int intElementId = elementId.IntegerValue;
-
-            _mainWinForm.tbElementId.Text = intElementId.ToString();
+            _mainWinForm.tbElementId.Text = reference?.ElementId.ToString();
         }
     }
 }

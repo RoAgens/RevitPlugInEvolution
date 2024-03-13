@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace AGRevitCommandSimple.ViewModels
+namespace AGRevitCommandSimple.ViewModels.Base
 {
     public class RelayCommand : ICommand
     {

@@ -1,22 +1,19 @@
-﻿
-using Autodesk.Revit.DB;
-using System.ComponentModel;
-using System.Windows;
+﻿using Autodesk.Revit.DB;
+using AGRevitCommandSimple.Models;
+using AGRevitCommandSimple.ViewModels.Base;
 
 namespace AGRevitCommandSimple.ViewModels
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : BaseViewModel
     {
         private readonly Document _doc;
 
         public MainWindowViewModel(Document doc) => _doc = doc;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         private string _selectedElementId;
         public string SelectedElementId
         {
-            get { return _selectedElementId; }
+            get => _selectedElementId;
             set
             {
                 _selectedElementId = value;
@@ -24,28 +21,11 @@ namespace AGRevitCommandSimple.ViewModels
             }
         }
 
-        private void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         private RelayCommand _selectElement;
         public RelayCommand SelectElement => _selectElement ??
         (_selectElement = new RelayCommand(obj =>
         {
-            SelectElementService();
+            SelectedElementId = new SelectElementService(_doc).GetElementId();
         }));
-
-        private RelayCommand _closeWindow;
-        public RelayCommand CloseWindow => _closeWindow ??
-        (_closeWindow = new RelayCommand(obj =>
-        {
-            (obj as Window)?.Close();
-        }));
-
-        private void SelectElementService()
-        {
-
-        }
     }
 }

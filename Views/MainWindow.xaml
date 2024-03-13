@@ -31,10 +31,10 @@
                     Content="SelectElement"
                     Command="{Binding GetSelectedElementIDCommand}"/>
             <Button Grid.Column="1"
-                    x:Name="btnClose"
                     Margin="5"
                     Content="Close"
-                    Command="{Binding CloseWindowCommand}"/>
+                    Command="{Binding CloseWindowCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
         </Grid>
     </Grid>
 </Window>

@@ -18,6 +18,7 @@ namespace AGRevitCommandSimple.ViewModels
 
         [RelayCommand]
         private void GetSelectedElementID()
+
         {
             SelectedElementId = new SelectElementService(_uiDoc).GetElementId();
         }

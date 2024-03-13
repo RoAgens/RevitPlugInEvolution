@@ -23,7 +23,7 @@ namespace AGRevitCommandSimple
 
         private void SelectElemet()
         {
-            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element);
+            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element, "Please pick any element");
 
             _mainWinForm.tbElementId.Text = reference?.ElementId.ToString();
         }

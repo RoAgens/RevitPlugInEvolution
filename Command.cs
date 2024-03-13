@@ -21,16 +21,9 @@ namespace AGRevitCommandSimple
             return Result.Succeeded;
         }
 
-        private void BtClose_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void SelectElemet()
         {
-            UIDocument uIDocument = new(_doc);
-
-            Reference reference = uIDocument.Selection.PickObject(ObjectType.Element);
+            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element);
 
             _mainWinForm.tbElementId.Text = reference?.ElementId.ToString();
         }

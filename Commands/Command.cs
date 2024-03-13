@@ -4,6 +4,8 @@ using AGRevitCommandSimple.Base;
 using AGRevitCommandSimple.View;
 using Autodesk.Revit.Attributes;
 using AGRevitCommandSimple.ViewModels;
+using SimpleInjector;
+using AGRevitCommandSimple.Models;
 
 namespace AGRevitCommandSimple
 {
@@ -12,8 +14,15 @@ namespace AGRevitCommandSimple
     {
         public override Result Execute()
         {
-            MainWindowViewModel mainaWindowViewModel = new(_uiDoc);
-            MainWindow mainWindow = new(mainaWindowViewModel);
+            Container contaner = new();
+
+            contaner.RegisterInstance(_uiDoc);
+
+            contaner.Register<SelectElementService>();
+            contaner.Register<MainWindowViewModel>();
+            contaner.Register<MainWindow>();
+
+            MainWindow mainWindow = contaner.GetInstance<MainWindow>();
             mainWindow.Show();
 
             return Result.Succeeded;

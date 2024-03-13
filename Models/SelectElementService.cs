@@ -4,7 +4,7 @@ using Autodesk.Revit.UI.Selection;
 
 namespace AGRevitCommandSimple.Models
 {
-    internal class SelectElementService
+    public class SelectElementService
     {
         private readonly UIDocument _uiDoc;
 

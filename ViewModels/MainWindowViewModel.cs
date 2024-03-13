@@ -1,15 +1,18 @@
-﻿
-using Autodesk.Revit.DB;
+﻿using Autodesk.Revit.DB;
+using Autodesk.Revit.UI;
 using System.ComponentModel;
-using System.Windows;
+using Autodesk.Revit.UI.Selection;
+using AGRevitCommandSimple.View;
 
 namespace AGRevitCommandSimple.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private readonly Document _doc;
+        private readonly UIDocument _uiDoc;
 
-        public MainWindowViewModel(Document doc) => _doc = doc;
+        public MainWindowViewModel(UIDocument uiDoc) => _uiDoc = uiDoc;
+
+        private Document Doc => _uiDoc.Document;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,19 +36,21 @@ namespace AGRevitCommandSimple.ViewModels
         public RelayCommand SelectElement => _selectElement ??
         (_selectElement = new RelayCommand(obj =>
         {
-            SelectElementService();
+            SelectedElementId = SelectElementService();
         }));
 
         private RelayCommand _closeWindow;
         public RelayCommand CloseWindow => _closeWindow ??
         (_closeWindow = new RelayCommand(obj =>
         {
-            (obj as Window)?.Close();
+            (obj as MainWindow)?.Close();
         }));
 
-        private void SelectElementService()
+        private string SelectElementService()
         {
+            Reference reference = _uiDoc.Selection.PickObject(ObjectType.Element, "Please pick any element");
 
+            return reference?.ElementId.ToString();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace AGRevitCommandSimple.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(MainaWindowViewModel mainaWindowViewModel)
+        public MainWindow(MainWindowViewModel mainaWindowViewModel)
         {
             DataContext = mainaWindowViewModel;
             InitializeComponent();

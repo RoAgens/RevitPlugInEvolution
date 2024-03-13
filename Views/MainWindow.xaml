@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AGRevitCommandSimple.View"
+        xmlns:dc="clr-namespace:AGRevitCommandSimple.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow"
         Height="auto"
@@ -16,7 +17,8 @@
         <TextBlock x:Name="tbSelectElementId"
                    Width="150"
                    HorizontalAlignment="Center"
-                   Margin="0,4,0,4">
+                   Margin="0,4,0,4"
+                   Text="{Binding SelectedElementId}">
 
         </TextBlock>
         <Grid Grid.Row="1">
@@ -26,11 +28,13 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="btnSelectElement"
                     Margin="5"
-                    Content="SelectElement"/>
+                    Content="SelectElement"
+                    Command="{Binding SelectElement}"/>
             <Button Grid.Column="1"
                     x:Name="btnClose"
                     Margin="5"
-                    Content="Close"/>
+                    Content="Close"
+                    Command="{Binding CloseWindow}"/>
         </Grid>
     </Grid>
 </Window>

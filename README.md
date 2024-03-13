@@ -11,3 +11,5 @@
 - Step 10 - (branch RevitCommandWithWPFMVVMDI) - WPF and MVVM + DI.
 - Step 11 - (branch RevitCommandWithWPFMVVMDIDTO) - WPF and MVVM + DI + DTO (by @WhiteSharq, see: https://github.com/WhiteSharq).
 - Step 12 - your code...
+--------------------------
+full template see: https://github.com/Nice3point

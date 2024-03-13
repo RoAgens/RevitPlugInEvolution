@@ -5,9 +5,9 @@
 - Step 4 - (branch RevitCommandWithWinForm_2) - WinForm and public controls.
 - Step 5 - (branch RevitCommandWithWinFormAddPushButton) - WinForm (var 2) with start PushButton.
 - Step 6 - (branch RevitCommandWithWPF) - WPF.
-- Step 7 - (branch RevitCommandWithWPFMVVM_1) - WPF and bad MVVM.
-- Step 8 - (branch RevitCommandWithWPFMVVM_2) - WPF and MVVM.
-- Step 9 - (branch RevitCommandWithWPFMVVM_3) - WPF and MVVM use CommunityToolkit.Mvvm.
+- Step 7 - (branch 7.RevitCommandWPFbadMVVM) - WPF and bad MVVM.
+- Step 8 - (branch RevitCommandWithWPFMVVM) - WPF and MVVM.
+- Step 9 - (branch RevitCommandWithWPFMVVMuseFW) - WPF and MVVM use CommunityToolkit.Mvvm.
 - Step 10 - (branch RevitCommandWithWPFMVVMDI) - WPF and MVVM + DI.
 - Step 11 - (branch RevitCommandWithWPFMVVMDIDTO) - WPF and MVVM + DI + DTO (by @WhiteSharq).
 - Step 12 - your code...

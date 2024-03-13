@@ -26,12 +26,11 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="btnSelectElement"
                     Margin="5"
-                    Content="SelectElement"
-                    Click="btnSelectElement_Click"/>
+                    Content="SelectElement"/>
             <Button Grid.Column="1"
                     x:Name="btnClose"
                     Margin="5"
-                    Content="Close" Click="btnClose_Click"/>
+                    Content="Close"/>
         </Grid>
     </Grid>
 </Window>

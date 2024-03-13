@@ -1,4 +1,5 @@
-﻿using Autodesk.Revit.DB;
+﻿using AGRevitCommandSimple.ViewModels;
+using Autodesk.Revit.DB;
 using System.Windows;
 
 namespace AGRevitCommandSimple.View
@@ -8,23 +9,10 @@ namespace AGRevitCommandSimple.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly Document _doc;
-
-        public MainWindow(Document doc)
+        public MainWindow(MainaWindowViewModel mainaWindowViewModel)
         {
-            _doc = doc;
-            tbSelectElementId.Text = "---------";
+            DataContext = mainaWindowViewModel;
             InitializeComponent();
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void btnSelectElement_Click(object sender, RoutedEventArgs e)
-        {
-            tbSelectElementId.Text = "---------";
         }
     }
 }

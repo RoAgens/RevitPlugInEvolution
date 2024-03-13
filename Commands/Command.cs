@@ -1,5 +1,6 @@
 ﻿using AGRevitCommandSimple.Base;
 using AGRevitCommandSimple.View;
+using AGRevitCommandSimple.ViewModels;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
@@ -11,7 +12,8 @@ namespace AGRevitCommandSimple
     {
         public override Result Execute()
         {
-            MainWindow mainWindow = new(_doc);
+            MainaWindowViewModel mainaWindowViewModel = new(_doc);
+            MainWindow mainWindow = new(mainaWindowViewModel);
             mainWindow.ShowDialog();
 
             return Result.Succeeded;

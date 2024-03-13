@@ -29,7 +29,7 @@ namespace AGRevitCommandSimple.UI
         {
             UIDocument uIDocument = new(_doc);
 
-            Reference reference = uIDocument.Selection.PickObject(ObjectType.Element);
+            Reference reference = uIDocument.Selection.PickObject(ObjectType.Element, "Please pick any element");
  
             return $"{reference?.ElementId.ToString()}";
         }

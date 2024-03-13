@@ -1,2 +1,2 @@
-# Step 6 - WPF and code-behind.
+# Step 8 - WPF and MVVM.
 net48, Revit 2021
